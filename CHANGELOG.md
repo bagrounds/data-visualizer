@@ -25,8 +25,16 @@ Please use: Added, Changed, Deprecated, Removed, Fixed, or Security as labels.
 ##### Security
 * ...
 
-#### 0.1.0 - (2016-06-08)
+#### 0.1.0 - (2016-06-21)
 ##### Added
-* LICENSE.md (MIT)
-* CHANGELOG (this)
+* All files from bagrounds/template-spa v0.2.0
+* bar-chart module from my external project
+
+##### Changed
+* relevant files from template to suit this project
+* CHANGELOG (this) to suit this project
+* dependencies as appropriate
+
+##### Removed
+* irrelevant files
 

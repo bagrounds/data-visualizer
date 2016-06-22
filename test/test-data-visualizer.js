@@ -1,5 +1,5 @@
 /**
- * Tests for template-spa
+ * Tests for data-visualizer
  */
 ;(function () {
   /* global describe, it */
@@ -8,13 +8,14 @@
   /* Imports */
   var expect = require('chai').expect
 
-  var templateSpa = require('../template-spa')
+  var dataVisualizer = require('../data-visualizer')
 
   /* Tests */
-  describe('template-spa', function () {
+  describe('data-visualizer', function () {
     describe('stub', function () {
       it('should pass', function () {
         expect(true).to.be.true
+        expect(dataVisualizer).to.be.a.function
       })
     })
   })
