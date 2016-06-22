@@ -21,7 +21,13 @@
    * @param {Function} callback handle results
    */
   function visualize (options, callback) {
-    
+    var error = invalidOptions(options)
+
+    if (error) {
+      callback(error)
+    }
+
+    barChart(options, callback)
   }
 
   /**
@@ -38,6 +44,4 @@
 
     return null
   }
-
-
 })()
