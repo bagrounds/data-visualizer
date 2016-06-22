@@ -1,4 +1,4 @@
-# template-spa
+# data-visualizer
 
 [![GitHub Downloads][github-img]][github-url]
 [![Travis-CI][travis-img]][travis-url]
@@ -7,20 +7,19 @@
 [![Code Climate][codeclimate-issues-img]][codeclimate-issues-url]
 [![js-standard-style][standard-img]][standard-url]
 
-A template for single page applications (SPA).
+Visualize data
 
 ## Installation
 
 ``` bash
-  $ npm install 'bagrounds/template-spa'
+  $ npm install 'bagrounds/data-visualizer'
 ```
 
 ## [Documentation][gh-pages-url]
 
 
 ## Usage
-Clone the module and replace example code.
-
+...
 
 ## Tests
 ``` bash
@@ -41,19 +40,19 @@ Clone the module and replace example code.
 [standard-img]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [standard-url]: http://standardjs.com/
 
-[github-img]: https://img.shields.io/github/downloads/bagrounds/template-spa/total.svg
-[github-url]: https://github.com/bagrounds/template-spa
+[github-img]: https://img.shields.io/github/downloads/bagrounds/data-visualizer/total.svg
+[github-url]: https://github.com/bagrounds/data-visualizer
 
-[travis-img]: https://img.shields.io/travis/bagrounds/template-spa/master.svg
-[travis-url]: https://travis-ci.org/bagrounds/template-spa
+[travis-img]: https://img.shields.io/travis/bagrounds/data-visualizer/master.svg
+[travis-url]: https://travis-ci.org/bagrounds/data-visualizer
 
-[coveralls-img]: https://coveralls.io/repos/github/bagrounds/template-spa/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/bagrounds/template-spa?branch=master
+[coveralls-img]: https://coveralls.io/repos/github/bagrounds/data-visualizer/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/bagrounds/data-visualizer?branch=master
 
-[codeclimate-img]: https://codeclimate.com/github/bagrounds/template-spa/badges/gpa.svg
-[codeclimate-url]: https://codeclimate.com/github/bagrounds/template-spa
+[codeclimate-img]: https://codeclimate.com/github/bagrounds/data-visualizer/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/bagrounds/data-visualizer
 
-[codeclimate-issues-img]: https://codeclimate.com/github/bagrounds/template-spa/badges/issue_count.svg
-[codeclimate-issues-url]: https://codeclimate.com/github/bagrounds/template-spa/issues
+[codeclimate-issues-img]: https://codeclimate.com/github/bagrounds/data-visualizer/badges/issue_count.svg
+[codeclimate-issues-url]: https://codeclimate.com/github/bagrounds/data-visualizer/issues
 
-[gh-pages-url]: http://bagrounds.github.io/template-spa
+[gh-pages-url]: http://bagrounds.github.io/data-visualizer
