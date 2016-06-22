@@ -15,6 +15,7 @@
     describe('stub', function () {
       it('should pass', function () {
         expect(true).to.be.true
+        expect(dataVisualizer).to.be.a.function
       })
     })
   })

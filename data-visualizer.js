@@ -1,5 +1,5 @@
 /**
- * Visualize data 
+ * Visualize data
  *
  * @module data-visualizer
  */
@@ -8,7 +8,7 @@
 
   /* imports */
   var typeCheck = require('type-check').typeCheck
-  var barChart = require('lib/bar-chart')
+  var barChart = require('./js/bar-chart')
 
   /* exports */
   module.exports = visualize
@@ -37,7 +37,7 @@
    * @return {Error} if options are invalid
    */
   function invalidOptions (options) {
-    if (!typeCheck('Object',options)) {
+    if (!typeCheck('Object', options)) {
       var message = 'options should be an object'
       return new Error(message)
     }

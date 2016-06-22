@@ -2,20 +2,16 @@
  *
  * @module chart
  */
-(function () {
-  'use strict';
+;(function () {
+  'use strict'
+  /* global document */
 
-  var d3 = require('d3');
-  var React = require('react');
-  var ReactDOM = require('react-dom');
-  var moment = require('moment');
-  var _ = require('lodash');
+  var React = require('react')
+  var ReactDOM = require('react-dom')
 
-  "use strict";
+  var BarChart = require('react-d3-basic').BarChart
 
-  var BarChart = require('react-d3-basic').BarChart;
-
-  module.exports = chart;
+  module.exports = chart
 
   /**
    * Plots a bar chart
@@ -37,44 +33,37 @@
    *
    * @param {Function} callback handle results
    */
-  function chart(options, callback){
+  function chart (options, callback) {
+    var error = invalidOptions(options)
 
-    console.log('chart options: ' + JSON.stringify(options))
-
-    var error = invalidOptions(options);
-
-    if( error ){
-
-      callback(error);
-      return;
+    if (error) {
+      callback(error)
+      return
     }
 
-    var xScale = 'ordinal';
-    var yTicks = [10];
+    var xScale = 'ordinal'
+    var yTicks = [10]
 
-
-    function width(){
-
-      if( options.width ){
+    function width () {
+      if (options.width) {
         return options.width
       }
 
-      var parent = document.getElementById(options.parentDiv);
+      var parent = document.getElementById(options.parentDiv)
 
-      var width = parent.offsetWidth;
+      var width = parent.offsetWidth
 
-      return width;
+      return width
     }
 
-    function height() {
-      return options.height ?
-        options.height :
-        undefined
+    function height () {
+      return options.height
+        ? options.height
+        : undefined
     }
-    //var height = 400;
+    // var height = 400
 
     ReactDOM.render(React.createElement(BarChart, {
-
       title: options.title,
       data: options.data,
       width: width(),
@@ -91,14 +80,14 @@
           name: options.yLabel
         }
       ],
-      x: function(d) {
-        return d[options.xValueId];
+      x: function (d) {
+        return d[options.xValueId]
       },
       xScale: xScale,
-      yTicks: yTicks,
-    }), document.getElementById(options.parentDiv));
+      yTicks: yTicks
+    }), document.getElementById(options.parentDiv))
 
-    callback();
+    callback()
   }
 
   /**
@@ -118,28 +107,25 @@
    *
    * @returns {Error|Boolean} an error if problems, or false
    */
-  function invalidOptions(options){
+  function invalidOptions (options) {
+    var requiredOptions = [
+      'data',
+      'width',
+      'height',
+      'xValueId',
+      'yValueId',
+      'parentDiv'
+    ]
 
-    var data = options.data;
+    var error
 
-    var width = options.width;
+    requiredOptions.forEach(function (option) {
+      if (!options[option]) {
+        var message = 'option: ' + option + ' missing!'
+        error = new Error(message)
+      }
+    })
 
-    var height = options.height;
-
-    var xValueId = options.xValueId;
-
-    var xLabel = options.xLabel;
-
-    var yValueId = options.yValueId;
-
-    var yLabel = options.yLabel;
-
-    var title = options.title;
-
-    var parentDiv = options.parentDiv;
-
-    return false;
+    return error
   }
-
-
-})();
+})()
