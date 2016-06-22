@@ -16,9 +16,15 @@
     "document": "jsdoc --destination docs -c .jsdoc.json -r",
     "prelint": "standard-format -w",
     "lint": "eslint --ignore-path .gitignore .",
-    "gh-pages": "gh-pages-deploy",
+    "eslint": "eslint --ignore-path .gitignore .",
+    "gh-pages": "gh-pages-deploy"
   },
   "dependencies": {
+    "d3": "^3.5.17",
+    "lodash": "^4.13.1",
+    "moment": "^2.13.0",
+    "react-d3-basic": "^1.6.11",
+    "type-check": "^0.3.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
