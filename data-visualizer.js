@@ -25,6 +25,8 @@
 
     if (error) {
       callback(error)
+      console.error(error)
+      return
     }
 
     barChart(options, callback)
