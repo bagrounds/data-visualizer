@@ -8,7 +8,7 @@
 
   /* imports */
   var typeCheck = require('type-check').typeCheck
-  var barChart = require('./js/bar-chart')
+  var barChart = require('./js/chart')
 
   /* exports */
   module.exports = visualize
