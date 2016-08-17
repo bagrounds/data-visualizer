@@ -6,7 +6,7 @@ project adheres to [Semantic Versioning](http://semver.org/).
 Please use: Added, Changed, Deprecated, Removed, Fixed, or Security as labels.
 <br>
 
-#### 0.2.0 - (Unreleased)
+#### 0.3.0 - (Unreleased)
 ##### Added
 * ...
 
@@ -24,6 +24,10 @@ Please use: Added, Changed, Deprecated, Removed, Fixed, or Security as labels.
 
 ##### Security
 * ...
+
+#### 0.2.0 - (2016-08-16)
+##### Added
+* support for line charts
 
 #### 0.1.0 - (2016-06-21)
 ##### Added
