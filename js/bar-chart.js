@@ -10,6 +10,12 @@
   var ReactDOM = require('react-dom')
 
   var BarChart = require('react-d3-basic').BarChart
+  var LineChart= require('react-d3-basic').LineChart
+
+  var CHART_TYPES = {
+    line: LineChart,
+    bar: BarChart
+  }
 
   module.exports = chart
 
@@ -30,6 +36,7 @@
    * @param {String} options.yLabel y axis label
    * @param {String} options.title chart title
    * @param {String} options.parentDiv where to render the chart
+   * @param {String} options.type line or bar (default)
    *
    * @param {Function} callback handle results
    */
@@ -39,6 +46,10 @@
     if (error) {
       callback(error)
       return
+    }
+
+    if (!options.type) {
+      options.type = 'bar'
     }
 
     var xScale = 'ordinal'
@@ -63,7 +74,7 @@
     }
     // var height = 400
 
-    ReactDOM.render(React.createElement(BarChart, {
+    ReactDOM.render(React.createElement(CHART_TYPES[options.type], {
       title: options.title,
       data: options.data,
       width: width(),
